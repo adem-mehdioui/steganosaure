@@ -1,5 +1,8 @@
 import string
 
+string.printable = string.printable.replace("\r", "à")
+
+
 def cesar_ciffer(message, key):
 	if type(key) != int :
 		print("la clef doit être un entier")
@@ -33,4 +36,5 @@ print("#"*30)
 for possible_key in range(0, len(string.printable)):
 	print(cesar_decrypt(crypted_message, possible_key))
 print("#"*30)
+
 
